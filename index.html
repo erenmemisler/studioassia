@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Assia | Sinematik Videografi</title>
+    <meta name="description"
+        content="Profesyonel prodüksiyon ve videografi portfolyosu. Anları sinematik mükemmellikle yakalıyoruz.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header id="main-header">
+        <div class="container">
+            <a href="#" class="logo">STUDIO <span class="accent">ASSIA</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">Anasayfa</a></li>
+                    <li><a href="#portfolio">Portfolyo</a></li>
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#about">Hakkımda</a></li>
+                    <li><a href="#contact" class="btn-primary">İletişim</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="#hero" class="mobile-link">Anasayfa</a>
+        <a href="#portfolio" class="mobile-link">Portfolyo</a>
+        <a href="#services" class="mobile-link">Hizmetler</a>
+        <a href="#about" class="mobile-link">Hakkımda</a>
+        <a href="#contact" class="mobile-link">İletişim</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-video-container">
+            <!-- Using a reliable 1080p stock video -->
+            <video autoplay muted loop playsinline poster="assets/images/hero-poster.jpg" id="hero-video">
+                <source src="https://videos.pexels.com/video-files/3209211/3209211-hd_1920_1080_25fps.mp4"
+                    type="video/mp4">
+                <source src="https://videos.pexels.com/video-files/3209211/3209211-hd_1920_1080_30fps.mp4"
+                    type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content container">
+            <h1 class="fade-in">Hareketi & <br> <span class="text-stroke">Duyguyu Yakala</span></h1>
+            <p class="fade-in delay-200">Markalar ve vizyonerler için sinematik hikaye anlatımı.</p>
+            <div class="hero-btns fade-in delay-400">
+                <a href="#portfolio" class="btn-primary">Çalışmaları Gör</a>
+                <a href="#contact" class="btn-outline">İletişime Geç</a>
+            </div>
+        </div>
+        <a href="#portfolio" class="scroll-down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seçilmiş İşler</h2>
+                <p>En iyi projelerimden oluşan özel bir koleksiyon.</p>
+            </div>
+
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="commercial">Reklam</button>
+                <button class="filter-btn" data-filter="music">Müzik Klibi</button>
+                <button class="filter-btn" data-filter="event">Etkinlik</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-thumb">
+                        <img src="https://placehold.co/600x400/252525/00A8CC?text=Proje+G%C3%B6rseli" alt="Proje 1">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Marka Kampanyası 2024</h3>
+                                <p class="project-cat">Reklam</p>
+                                <p class="project-desc">Bu proje için kreatif direktörlük ve post-prodüksiyon
+                                    süreçlerini yönettik. Markanın vizyonunu sinematik bir dille anlattık.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="music">
+                    <div class="portfolio-thumb">
+                        <img src="https://placehold.co/600x400/252525/00A8CC?text=Proje+G%C3%B6rseli" alt="Proje 2">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Geceler</h3>
+                                <p class="project-cat">Müzik Klibi</p>
+                                <p class="project-desc">Sanatçının yeni teklisi için dinamik ışıklandırma ve hızlı kurgu
+                                    teknikleri kullanarak enerjik bir klip hazırladık.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="event">
+                    <div class="portfolio-thumb">
+                        <img src="https://placehold.co/600x400/252525/00A8CC?text=Proje+G%C3%B6rseli" alt="Proje 3">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Yaz Festivali</h3>
+                                <p class="project-cat">Etkinlik Çekimi</p>
+                                <p class="project-desc">Festivalin coşkusunu ve atmosferini yansıtan, katılımcıların en
+                                    özel anlarını ölümsüzleştiren bir aftermovie çalışması.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item" data-category="commercial">
+                    <div class="portfolio-thumb">
+                        <img src="https://placehold.co/600x400/252525/00A8CC?text=Proje+G%C3%B6rseli" alt="Proje 4">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Teknoloji Lansmanı</h3>
+                                <p class="project-cat">Reklam</p>
+                                <p class="project-desc">Yeni ürünün özelliklerini vurgulayan, 3D animasyonlar ve
+                                    live-action görüntülerin harmanlandığı tanıtım filmi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-category="music">
+                    <div class="portfolio-thumb">
+                        <img src="https://placehold.co/600x400/252525/00A8CC?text=Proje+G%C3%B6rseli" alt="Proje 5">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Akustik Performans</h3>
+                                <p class="project-cat">Müzik Klibi</p>
+                                <p class="project-desc">Doğal ışık ve tek plan çekim tekniği ile sanatçının duygusunu ön
+                                    plana çıkaran samimi bir performans videosu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-category="event">
+                    <div class="portfolio-thumb">
+                        <img src="https://placehold.co/600x400/252525/00A8CC?text=Proje+G%C3%B6rseli" alt="Proje 6">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Kurumsal Gala</h3>
+                                <p class="project-cat">Etkinlik Çekimi</p>
+                                <p class="project-desc">Şirketin yıl sonu galasının prestijini ve ihtişamını yansıtan,
+                                    röportajlarla desteklenmiş etkinlik özeti.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding dark-bg">
+        <div class="container">
+            <div class="section-wrapper">
+                <div class="section-text">
+                    <h2>Uzmanlık & <br>Hizmetler</h2>
+                    <p>Özel ihtiyaçlarınıza yönelik üst düzey görsel içerikler sunuyoruz. Konsept aşamasından final
+                        kurguya kadar.
+                    </p>
+                </div>
+                <div class="services-list">
+                    <div class="service-item">
+                        <span class="service-number">01</span>
+                        <h3>Sinematografi</h3>
+                        <p>Profesyonel sinema kameraları ve ışıklandırma ile yüksek kaliteli çekimler.</p>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-number">02</span>
+                        <h3>Video Kurgu</h3>
+                        <p>Hassas kesimler, geçişler ve ritim ile yaratıcı hikaye anlatımı.</p>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-number">03</span>
+                        <h3>Renk Düzenleme (Color Grading)</h3>
+                        <p>Profesyonel renk düzeltme ile atmosfer ve duygu yaratımı.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container icons-wrapper">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://placehold.co/800x1000/252525/00A8CC?text=Profil+Foto%C4%9Fraf%C4%B1"
+                        alt="Videographer Portresi">
+                </div>
+                <div class="about-content">
+                    <h2>Lensin Arkasındaki <br> Vizyon</h2>
+                    <p>Merhaba, ben X. İstanbul merkezli tutkulu bir videographerım. 5 yılı aşkın deneyimimle,
+                        etkileyici hikayeler anlatan sinematik görseller oluşturma konusunda uzmanlaştım.</p>
+                    <p>Her karenin bir amacı olması gerektiğine inanıyorum. İster hızlı tempolu bir reklam filmi, ister
+                        duygusal bir düğün hikayesi olsun, hedefim anın özünü yakalamaktır.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Proje</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>30+</h3>
+                            <p>Müşteri</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5</h3>
+                            <p>Yıl</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding dark-bg">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Harika Bir Şeyler <br> Yaratalım</h2>
+                    <p>Projenize başlamaya hazır mısınız? İletişime geçin ve vizyonunuzu konuşalım.</p>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-envelope"></i> <a
+                                href="mailto:merhaba@studioassia.com">merhaba@studioassia.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+905551234567">+90 555 123 45 67</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">İsim</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">E-posta</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service-type">
+                                <option value="" disabled selected>Proje Türü</option>
+                                <option value="commercial">Reklam</option>
+                                <option value="music">Müzik Klibi</option>
+                                <option value="wedding">Düğün/Etkinlik</option>
+                                <option value="other">Diğer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Mesajınız</label>
+                        </div>
+                        <button type="submit" class="btn-primary">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Studio Assia. Tüm hakları saklıdır.</p>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init("LlwAuYWSIcSeH3h3d");
+        })();
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
