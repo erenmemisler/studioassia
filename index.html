@@ -271,15 +271,15 @@
                 <div class="contact-form-container">
                     <form id="contact-form">
                         <div class="form-group">
-                            <input type="text" id="name" required>
+                            <input type="text" id="name" name="from_name" required>
                             <label for="name">İsim</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" name="from_email" required>
                             <label for="email">E-posta</label>
                         </div>
                         <div class="form-group">
-                            <select id="service-type">
+                            <select id="service-type" name="service_type">
                                 <option value="" disabled selected>Proje Türü</option>
                                 <option value="commercial">Reklam</option>
                                 <option value="music">Müzik Klibi</option>
@@ -288,7 +288,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                             <label for="message">Mesajınız</label>
                         </div>
                         <button type="submit" class="btn-primary">Gönder</button>
