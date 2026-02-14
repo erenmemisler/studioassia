@@ -4,9 +4,9 @@
     /* Lighter dark background */
     --text-color: #f0f0f0;
     --text-muted: #a0a0a0;
-    --accent-color: #00A8CC;
-    /* Cold Blue */
-    --accent-hover: #008da8;
+    --accent-color: #E0E0E0;
+    /* Silver/White */
+    --accent-hover: #FFFFFF;
     --nav-bg: rgba(26, 26, 26, 0.95);
     --border-color: #444;
     --card-bg: #252525;
@@ -100,8 +100,10 @@ section {
 
 .btn-primary {
     background-color: var(--accent-color);
-    color: white;
+    color: #000;
+    /* Black text on gold is more readable and premium */
     border: 1px solid var(--accent-color);
+    font-weight: 700;
 }
 
 .btn-primary:hover {
@@ -112,14 +114,14 @@ section {
 
 .btn-outline {
     background-color: transparent;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 .btn-outline:hover {
-    border-color: white;
-    background-color: white;
-    color: black;
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: #000;
     transform: translateY(-2px);
 }
 
@@ -174,10 +176,13 @@ p {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 2px;
+.logo img {
+    /* Use original image as requested */
+    height: 80px;
+    /* Keep size */
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
 .nav-links {
@@ -201,7 +206,7 @@ p {
 
 .nav-links .btn-primary {
     opacity: 1;
-    color: white;
+    color: #000;
     /* Fix standard link override */
 }
 
@@ -445,48 +450,54 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    /* Gradient instead of solid color */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
+    justify-content: flex-start;
+    /* Align left */
+    align-items: flex-end;
+    /* Align bottom */
+    padding: 20px;
+    opacity: 1;
+    /* Visible by default */
     transition: var(--transition);
 }
 
 .portfolio-info {
-    text-align: center;
-    transform: translateY(20px);
+    text-align: left;
+    /* Left align text */
+    transform: translateY(0);
+    /* No transform by default */
     transition: var(--transition);
+    width: 100%;
 }
 
 .portfolio-info h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
-    opacity: 0;
+    margin-bottom: 0.2rem;
+    transform: translateY(0);
+    opacity: 1;
+    /* Always visible in the layout, we fade the container */
 }
 
 .portfolio-info .project-cat {
     color: var(--accent-color);
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-    opacity: 0;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .portfolio-info .project-desc {
     color: #ccc;
     font-size: 0.85rem;
     line-height: 1.4;
-    max-width: 90%;
-    margin: 0 auto;
-    transform: translateY(20px);
-    transition: all 0.3s ease 0.1s;
-    opacity: 0;
+    max-width: 100%;
+    margin: 0;
+    transform: translateY(0);
+    opacity: 0.8;
 }
 
 .portfolio-item:hover .portfolio-thumb img {
@@ -494,15 +505,11 @@ p {
 }
 
 .portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
+    opacity: 0;
+    /* Hide on hover to see video/image clearly */
 }
 
-.portfolio-item:hover .portfolio-info h3,
-.portfolio-item:hover .portfolio-info .project-cat,
-.portfolio-item:hover .portfolio-info .project-desc {
-    transform: translateY(0);
-    opacity: 1;
-}
+/* Transforms removed since it's static now */
 
 .portfolio-item:hover .portfolio-info {
     transform: translateY(0);
@@ -526,8 +533,14 @@ p {
 }
 
 .about-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    /* Constrain height */
+    object-fit: cover;
     border-radius: 2px;
-    filter: grayscale(100%);
+    filter: none;
+    /* Removed grayscale for better clarity */
     transition: var(--transition);
 }
 
@@ -758,6 +771,12 @@ footer {
 
     .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+
+    #main-header .container {
+        display: flex;
+        /* Revert to flex for standard mobile layout (Logo Left, Hamburger Right) */
+        justify-content: space-between;
     }
 
     .footer-bottom {
