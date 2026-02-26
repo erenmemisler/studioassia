@@ -523,9 +523,12 @@ p {
 /* About Section */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-xl);
     align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-image {
@@ -561,6 +564,7 @@ p {
 
 .stats {
     display: flex;
+    justify-content: center;
     gap: var(--spacing-lg);
     margin-top: var(--spacing-md);
 }
