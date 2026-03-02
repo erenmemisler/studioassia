@@ -7,6 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLinks = document.querySelectorAll('.mobile-link');
     const filterBtns = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
+    // Hero Video Crossfade Loop
+    const heroVideos = document.querySelectorAll('.hero-video');
+    if (heroVideos.length > 1) {
+        let currentVideoIndex = 0;
+
+        heroVideos.forEach((video) => {
+            video.addEventListener('ended', () => {
+                video.classList.remove('active');
+
+                currentVideoIndex = (currentVideoIndex + 1) % heroVideos.length;
+                const nextVideo = heroVideos[currentVideoIndex];
+
+                nextVideo.classList.add('active');
+                nextVideo.currentTime = 0;
+                nextVideo.play();
+            });
+        });
+    }
+
     // Navigation Active State on Scroll (Optional/Enhanced)
     // Currently handled nicely by CSS intersection or simple scroll events could be added here
 
