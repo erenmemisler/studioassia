@@ -13,6 +13,7 @@
     --font-primary: 'Inter', sans-serif;
     --font-heading: 'Playfair Display', serif;
     /* For a touch of elegance */
+    --font-hero: 'Montserrat', sans-serif;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
@@ -159,30 +160,55 @@ p {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: var(--spacing-md) 0;
+    height: 100px; /* Fixed height for the navigation area */
+    background: transparent; /* Remove the large background bar */
+    display: flex;
+    align-items: center;
     transition: var(--transition);
 }
 
 #main-header.scrolled {
-    padding: var(--spacing-sm) 0;
     background-color: var(--nav-bg);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #main-header .container {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Context for absolute logo */
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
 }
 
 .logo img {
     /* Use original image as requested */
-    height: 80px;
+    height: 450px;
     /* Keep size */
     width: auto;
     object-fit: contain;
     border-radius: 10px;
+    filter: brightness(0) invert(1);
+    margin: 0;
+    margin-left: -40px;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
@@ -277,6 +303,11 @@ p {
     z-index: 1;
     padding-top: 60px;
     /* Offset fixed header */
+}
+
+.hero-content h1 {
+    font-family: var(--font-hero);
+    font-weight: 900;
 }
 
 .hero-btns {
@@ -787,6 +818,19 @@ footer {
 
     .hero-content h1 {
         font-size: 3rem;
+    }
+
+    .logo {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .logo img {
+        height: 250px;
+        margin: 0;
+        margin-left: -20px;
     }
 
     .portfolio-grid {
